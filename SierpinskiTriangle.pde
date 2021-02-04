@@ -1,28 +1,28 @@
 
-int size = 800;
+int Tsize = 800;
 boolean maxTrig = false;
 
 public void setup()
 {
- size(800,800);
+ Tsize(800,800);
  frameRate(60);
 }
 public void draw()
 {
  background(0);
  sierpinski(0, 800, size);
- if(size == 3400){
+ if(Tsize == 3400){
  maxTrig = true;
  }
- if(size == 800){
+ if(Tsize == 800){
  maxTrig = false;
  }
  
  if(maxTrig){
-   size-=50;
+   Tsize-=50;
  }
  else{
-   size+=50;
+   Tsize+=50;
  }
 }
 public void mouseDragged()//optional
